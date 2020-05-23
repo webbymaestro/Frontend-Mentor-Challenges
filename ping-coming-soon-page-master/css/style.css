@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    /* Primary */
+    --blue: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* Mobile First CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--very-dark-blue);
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(--very-dark-blue);
+}
+
+.wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0 2rem;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 2rem;
+}
+
+.light-t {
+    font-weight: 300;
+    color: gray;
+}
+
+.sub {
+    margin-bottom: 2rem;
+}
+
+.form {
+    padding: 0 1.5rem;
+}
+
+.form input {
+    font-family: 'Libre Franklin', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 0.7rem 2rem;
+    color: var(--pale-blue);    
+    border: 0.5px var(--pale-blue) solid;
+    border-radius: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+.form input:focus {
+    border-color: var(--blue);
+    font-weight: 300;
+    color: var(--blue);
+}
+
+.form-control.success input {
+    border-color: var(--blue);
+}
+
+.form-control.error input {
+    border-color: var(--light-red);
+}
+
+.form-control small {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--light-red);
+    margin-top: 5px;
+    display: none;
+}
+
+.form-control.error small {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    background: var(--blue);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 10px 0px rgba(22, 20, 20, 0.3);
+}
+
+.mockup {
+    margin: 4.5rem 0 6rem;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-item {
+    display: inline-block;
+    margin: 0 0.35rem;
+}
+
+i {
+    color: var(--blue);
+    font-size: 0.85rem;
+    padding: .4rem;
+    border: solid 0.5px var(--pale-blue);
+    border-radius: 1rem;
+}
+
+i:hover {
+    color: white;
+    background: var(--blue);
+}
+
+.copyright {
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+/* Ipad Screen Sizes */
+@media (min-width: 750px) and (max-width: 999px) {
+
+    .wrapper {
+        width: 60%;
+        padding: 6rem 0 2rem;
+    }
+    
+}
+
+/* larger screen sizes */
+@media (min-width: 1000px) {
+
+    .wrapper {
+        width: 40%;
+        padding: 4rem 0 1.5rem;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .mockup {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "input button";
+        gap: 1rem;
+    }
+
+    .form input {
+        grid-area: input;
+        height: 3rem;
+    }
+
+    .form button {
+        grid-area: button;
+        padding: 1rem 1.5rem;
+        height: 3rem;
+    }
+
+    .form-control small {
+        text-align: left;
+        padding-left: 2rem;
+    }
+}
